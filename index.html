@@ -3,12 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>My Portfolio - Henok Demissie</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Your Name</h1>
+        <div class="container">
+            <h1>Henok Demissie</h1>
+            <button id="darkModeToggle">🌙</button>
+        </div>
+        <div class="profile-container">
+            <img src="https://via.placeholder.com/200" alt="Henok Demissie" class="profile-photo">
+        </div>
         <nav>
             <ul>
                 <li><a href="#about">About</a></li>
@@ -21,14 +27,30 @@
     
     <section id="about">
         <h2>About Me</h2>
-        <p>Write a short bio about yourself, your experience, and what you do.</p>
+        <p>
+            I am a passionate <b>Software Engineer</b> with experience working on diverse projects, ranging from web development to automation and digital solutions. 
+            With a strong foundation in <b>JavaScript, React, and Python</b>, I specialize in building scalable, efficient, and user-friendly applications.
+        </p>
     </section>
     
     <section id="projects">
         <h2>Projects</h2>
         <div class="project">
-            <h3>Project Name</h3>
-            <p>Description of your project. Link to it if available.</p>
+            <h3>Smart Gebere</h3>
+            <div class="slideshow-container">
+                <div class="slide">
+                    <img src="C:\Users\HP\Desktop\photo_2025-03-17_16-22-52.jpg" alt="Smart Gebere Project 1">
+                </div>
+                <div class="slide">
+                    <img src="C:\Users\HP\Desktop\photo_2025-02-09_16-59-53.jpg" alt="Smart Gebere Project 2">
+                </div>
+                <div class="slide">
+                    <img src="C:\Users\HP\Desktop\photo_2025-02-09_16-59-52.jpg/800x400" alt="Smart Gebere Project 3">
+                </div>
+                <a class="prev" onclick="changeSlide(-1)">❮</a>
+                <a class="next" onclick="changeSlide(1)">❯</a>
+            </div>
+            <p>An innovative initiative focused on digitalizing farming through automation, weather insights, and disease detection technology.</p>
         </div>
     </section>
     
@@ -45,15 +67,17 @@
     
     <section id="contact">
         <h2>Contact</h2>
-        <p>Email: <a href="mailto:your.email@gmail.com">your.email@gmail.com</a></p>
-        <p>LinkedIn: <a href="#">Your LinkedIn</a></p>
-        <p>Facebook: <a href="#">Your Facebook</a></p>
-        <p>Telegram: <a href="#">Your Telegram</a></p>
-        <p>YouTube: <a href="#">Your YouTube</a></p>
+        <p>Email: <a href="mailto:henokdemissie13@gmail.com">henokdemissie13@gmail.com</a></p>
+        <p>LinkedIn: <a href="#">www.linkedin.com/in/henok-demissie</a></p>
+        <p>Facebook: <a href="#">Henok Demissie</a></p>
+        <p>Telegram: <a href="#">@Hencha</a></p>
+        <p>YouTube: <a href="#">YouTube Channel</a></p>
     </section>
     
     <footer>
-        <p>&copy; 2025 Your Name. All Rights Reserved.</p>
+        <p>&copy; 2025 Henok Demissie. All Rights Reserved.</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
