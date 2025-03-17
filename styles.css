@@ -4,18 +4,84 @@ body {
     padding: 0;
     background-color: #f4f4f4;
     color: #333;
+    transition: all 0.3s ease-in-out;
 }
 
+.dark-mode {
+    background-color: #222;
+    color: #fff;
+}
+
+.dark-mode section {
+    background: #333;
+    color: #fff;
+}
+
+.dark-mode .project {
+    background: #444;
+    color: #fff;
+}
+
+.dark-mode nav ul li a:hover {
+    color: #66b3ff;
+}
+
+/* Header */
 header {
     background: #222;
     color: white;
-    padding: 20px;
     text-align: center;
+    padding: 20px;
+    position: relative;
 }
 
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.profile-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #fff;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+#darkModeToggle {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+#darkModeToggle:hover {
+    transform: scale(1.2);
+}
+
+/* Navigation */
 nav ul {
     list-style: none;
     padding: 0;
+    text-align: center;
 }
 
 nav ul li {
@@ -27,49 +93,152 @@ nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    position: relative;
 }
 
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #0073e6;
+    transition: width 0.3s ease-in-out;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Sections */
 section {
     padding: 40px;
     text-align: center;
     background: white;
-    margin: 20px;
+    margin: 20px auto;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 90%;
+    transition: all 0.3s ease-in-out;
 }
 
-#projects .project {
-    background: #ddd;
+section:hover {
+    transform: translateY(-5px);
+}
+
+/* Projects */
+.project {
+    background: #f5f5f5;
     padding: 15px;
-    margin: 10px auto;
+    margin: 20px auto;
     width: 80%;
-    border-radius: 5px;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
 }
 
+.project:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.slideshow-container {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+}
+
+.slide {
+    display: none;
+    animation: fade 1.5s ease-in-out;
+}
+
+.slide img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 16px;
+    color: white;
+    background: rgba(0,0,0,0.8);
+    border-radius: 50%;
+    transition: 0.3s ease;
+}
+
+.next {
+    right: 0;
+}
+
+.prev:hover, .next:hover {
+    background: rgba(0,0,0,0.9);
+}
+
+@keyframes fade {
+    from { opacity: 0.4 }
+    to { opacity: 1 }
+}
+
+/* Skills */
 #skills ul {
     list-style: none;
     padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
 }
 
 #skills ul li {
-    display: inline-block;
     background: #222;
     color: white;
-    padding: 10px;
-    margin: 5px;
-    border-radius: 5px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
 }
 
+#skills ul li:hover {
+    background: #0073e6;
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* Contact */
 #contact a {
     color: #0073e6;
     text-decoration: none;
-    font-weight: bold;
+    transition: all 0.3s ease-in-out;
 }
 
+#contact a:hover {
+    color: #004d99;
+    text-decoration: underline;
+}
+
+/* Footer */
 footer {
     background: #222;
     color: white;
     text-align: center;
-    padding: 10px;
+    padding: 15px;
     margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .project {
+        width: 95%;
+    }
+    
+    nav ul li {
+        margin: 0 8px;
+    }
 }
