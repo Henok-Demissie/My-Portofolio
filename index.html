@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio - Henok Demissie</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Henok Demissie | Software Engineer Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
     <header>
-        <div class="container">
-            <h1>Henok Demissie</h1>
-            <button id="darkModeToggle">🌙</button>
+        <div class="container header-container">
+            <h1 class="logo">Henok Demissie</h1>
+            <button id="darkModeToggle" aria-label="Toggle Dark Mode">🌙</button>
         </div>
         <div class="profile-container">
-            <img src="https://via.placeholder.com/200" alt="Henok Demissie" class="profile-photo">
+            <img src="https://via.placeholder.com/200" alt="Henok Demissie Profile Photo" class="profile-photo" />
         </div>
         <nav>
-            <ul>
+            <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#skills">Skills</a></li>
@@ -24,58 +24,65 @@
             </ul>
         </nav>
     </header>
-    
-    <section id="about">
-        <h2>About Me</h2>
-        <p>
-            I am a passionate <b>Software Engineer</b> with experience working on diverse projects, ranging from web development to automation and digital solutions. 
-            With a strong foundation in <b>JavaScript, React, and Python</b>, I specialize in building scalable, efficient, and user-friendly applications.
-        </p>
-    </section>
-    
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project">
-            <h3>Smart Gebere</h3>
-            <div class="slideshow-container">
-                <div class="slide">
-                    <img src="C:\Users\HP\Desktop\photo_2025-03-17_16-22-52.jpg" alt="Smart Gebere Project 1">
+
+    <main>
+        <section id="about" class="section">
+            <h2>About Me</h2>
+            <p>
+                I'm a dedicated <strong>Software Engineer</strong> with hands-on experience in designing, building, and deploying impactful digital solutions. I have a strong command of <strong>JavaScript, React, and Python</strong>, and I’m passionate about creating scalable, intuitive, and efficient applications across various domains.
+            </p>
+        </section>
+
+        <section id="projects" class="section">
+            <h2>Projects</h2>
+            <div class="project">
+                <h3>Smart Gebere</h3>
+                <div class="slideshow-container">
+                    <div class="slide">
+                        <img src="images/smart-gebere-1.jpg" alt="Smart Gebere - Dashboard Screenshot" />
+                    </div>
+                    <div class="slide">
+                        <img src="images/smart-gebere-2.jpg" alt="Smart Gebere - Weather Interface" />
+                    </div>
+                    <div class="slide">
+                        <img src="images/smart-gebere-3.jpg" alt="Smart Gebere - Disease Detection" />
+                    </div>
+                    <a class="prev" onclick="changeSlide(-1)">❮</a>
+                    <a class="next" onclick="changeSlide(1)">❯</a>
                 </div>
-                <div class="slide">
-                    <img src="C:\Users\HP\Desktop\photo_2025-02-09_16-59-53.jpg" alt="Smart Gebere Project 2">
-                </div>
-                <div class="slide">
-                    <img src="C:\Users\HP\Desktop\photo_2025-02-09_16-59-52.jpg/800x400" alt="Smart Gebere Project 3">
-                </div>
-                <a class="prev" onclick="changeSlide(-1)">❮</a>
-                <a class="next" onclick="changeSlide(1)">❯</a>
+                <p>
+                    Smart Gebere is a tech-driven initiative revolutionizing agriculture through automation, real-time weather insights, and disease detection to empower farmers with actionable data.
+                </p>
             </div>
-            <p>An innovative initiative focused on digitalizing farming through automation, weather insights, and disease detection technology.</p>
-        </div>
-    </section>
-    
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>React</li>
-            <li>Python</li>
-        </ul>
-    </section>
-    
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:henokdemissie13@gmail.com">henokdemissie13@gmail.com</a></p>
-        <p>LinkedIn: <a href="#">www.linkedin.com/in/henok-demissie</a></p>
-        <p>Facebook: <a href="#">Henok Demissie</a></p>
-        <p>Telegram: <a href="#">@Hencha</a></p>
-        <p>YouTube: <a href="#">YouTube Channel</a></p>
-    </section>
-    
+        </section>
+
+        <section id="skills" class="section">
+            <h2>Skills</h2>
+            <ul class="skills-list">
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript (ES6+)</li>
+                <li>React.js</li>
+                <li>Python</li>
+                <li>REST APIs</li>
+                <li>Version Control (Git)</li>
+            </ul>
+        </section>
+
+        <section id="contact" class="section">
+            <h2>Contact</h2>
+            <ul class="contact-list">
+                <li>Email: <a href="mailto:henokdemissie13@gmail.com">henokdemissie13@gmail.com</a></li>
+                <li>LinkedIn: <a href="#" target="_blank">linkedin.com/in/henok-demissie</a></li>
+                <li>Facebook: <a href="#" target="_blank">Henok Demissie</a></li>
+                <li>Telegram: <a href="#" target="_blank">@Hencha</a></li>
+                <li>YouTube: <a href="#" target="_blank">YouTube Channel</a></li>
+            </ul>
+        </section>
+    </main>
+
     <footer>
-        <p>&copy; 2025 Henok Demissie. All Rights Reserved.</p>
+        <p>&copy; 2025 Henok Demissie. All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>
