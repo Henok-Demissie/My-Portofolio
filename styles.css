@@ -237,11 +237,12 @@ span {
 .about-content p{
   font-size: 1.6rem;
   margin: 2rem 0 3rem;
+  color: white;
 }
 
 /*scrollBar Design*/
 ::-webkit-scrollbar{
-  width;15px;}
+  width: 15px;}
 
 ::-webkit-scrollbar-thumb{
   background-color: var(--main-clor)
@@ -257,6 +258,10 @@ span {
   align-items: center;
   gap: 2.3rem;
   margin-top: 4.2rem;
+}
+
+.portfolio h2 {
+  color: var(--text-color);
 }
 
 .row {
